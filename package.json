@@ -8,12 +8,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "babel --presets es2015 -d dist/ src && node ./dist/index.js"
+    "start": "babel --presets es2015 -d dist/ src && node ./dist/index.js",
+    "start:dev": "babel --presets es2015 -d dist/ src && node --trace-warnings ./dist/index.js"
   },
   "dependencies": {
     "change-case": "^4.1.1",
     "replace-in-file": "^5.0.2",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

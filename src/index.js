@@ -2,18 +2,18 @@ import * as changeCase from "change-case";
 import replace from "replace-in-file";
 import shell from "shelljs";
 
-const fromStr = "old-name";
-const toStr = "new-name";
+const fromStr = "bonus-category";
+const toStr = "service-category";
 
-const pathToProject = `/path/to/folder/with/project`;
+const pathToProject = `/home/rkaras/Projects/my/smart-object-renamer/TEMP/`;
 
 const RegExpStr = `'s/(\\b${fromStr}\\b)(?!.*\\1)/${toStr}/g'`;
 
 const files = [
   `${pathToProject}${fromStr}/*`,
-  `${pathToProject}${fromStr}/args/*`,
   `${pathToProject}${fromStr}/dto/*`,
-  `${pathToProject}${fromStr}/input/*`,
+  `${pathToProject}${fromStr}/dto/args/*`,
+  `${pathToProject}${fromStr}/dto/input/*`,
 ];
 
 const  cases = {
